@@ -1,0 +1,44 @@
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+th {
+	cursor:pointer;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: 0px;
+}
+.tabsdemoDynamicHeight md-content {
+    background-color: transparent !important; 
+}
+.tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1;
+}
+.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+    background: white; 
+}
+.tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0;
+}
+.incident-info {
+	width:310px;
+	min-height:230px;
+	margin-left:10px;
+	padding:20px 0 0 20px;
+}
+.incident-info li {
+	font-size:14px;
+	margin-bottom:10px;
+	overflow: hidden;
+}
+.incident-info li label {
+	color:#445c5f;
+	background-color:#c1c1c1;
+	float:left;
+	padding:4px 7px;
+}
+.incident-info li span {
+	float:right;
+	width:170px;
+}

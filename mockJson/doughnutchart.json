@@ -1,0 +1,48 @@
+{
+  "result": [
+    {
+      "stats": {
+        "count": "5"
+      },
+      "groupby_fields": [
+        {
+          "field": "state",
+          "value": "New"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "count": "20"
+      },
+      "groupby_fields": [
+        {
+          "field": "state",
+          "value": "In Progress"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "count": "6"
+      },
+      "groupby_fields": [
+        {
+          "field": "state",
+          "value": "On Hold"
+        }
+      ]
+    },
+    {
+      "stats": {
+        "count": "22"
+      },
+      "groupby_fields": [
+        {
+          "field": "state",
+          "value": "Closed"
+        }
+      ]
+    }
+  ]
+}
