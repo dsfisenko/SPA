@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <div class="pull-left">
+        <h3>Incident info:</h3>
+    </div>
+    <div class="pull-right">
+        <button ng-click="$ctrl.Resolve()" class="btn btn-secondary">Resolve</button>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div>
+        <ul class="incident-info">
+            <li><label>Number</label><span>{{$ctrl.incident.number}}</span></li>
+            <li><label>Caller</label><span>{{$ctrl.incident.caller_id}}</span></li>
+            <li><label>Opened</label><span>{{$ctrl.incident.opened_at}}</span></li>
+            <li><label>State</label><span>{{$ctrl.incident.state}}</span></li>
+            <li><label>Urgency</label><span>{{$ctrl.incident.urgency}}</span></li>
+            <li><label>Description</label><span>{{$ctrl.incident.description}}</span></li>
+        </ul>
+    </div>
+</div>
