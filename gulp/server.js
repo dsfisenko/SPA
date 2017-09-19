@@ -25,6 +25,13 @@ function browserSyncInit(baseDir, browser) {
     baseDir: baseDir,
     routes: routes
   };
+  
+  var basicAuth = {
+	login: 'Admin',
+	pwd: 'admiN123$%^'
+  };
+  
+  var authToken = new Buffer(basicAuth.login+':'+basicAuth.pwd).toString('base64');
 
   /*
    * You can add a proxy to your backend by uncommenting the line below.
@@ -33,8 +40,19 @@ function browserSyncInit(baseDir, browser) {
    *
    * For more details and option, https://github.com/chimurai/http-proxy-middleware/blob/v0.9.0/README.md
    */
-  // server.middleware = proxyMiddleware('/users', {target: 'http://jsonplaceholder.typicode.com', changeOrigin: true});
-
+  server.middleware = [];
+  server.middleware.push(proxyMiddleware('/table/incident', {target: 'https://dev35531.service-now.com/api/now', 
+															 changeOrigin: true,
+															 onProxyReq: onProxyReq}));
+  server.middleware.push(proxyMiddleware('/stats/incident', {target: 'https://dev35531.service-now.com/api/now', 
+															 changeOrigin: true,
+															 onProxyReq: onProxyReq}));
+  
+  function onProxyReq(proxyReq, req, res) {
+	// add custom header to request 
+	proxyReq.setHeader('Authorization', 'Basic '+authToken);
+  }
+  
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,

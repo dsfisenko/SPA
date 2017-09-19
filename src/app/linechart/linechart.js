@@ -7,10 +7,11 @@
         .controller(controllerId, linechart);
 
 
-    function linechart($scope) {
-        $scope.labels = ['August\'16', 'September', 'Oktober', 'November', 'December', 'Junuary', 'February\'17'];
-        $scope.data = [18, 48, 40, 19, 86, 27, 90];
-        $scope.datasetOverride = [
+    function linechart() {
+		var vm = this;
+        vm.labels = ['August\'16', 'September', 'Oktober', 'November', 'December', 'Junuary', 'February\'17'];
+        vm.data = [18, 48, 40, 19, 86, 27, 90];
+        vm.datasetOverride = [
         {
             label: "Line chart",
             borderWidth: 3,
@@ -20,7 +21,7 @@
             yAxisID: 'y-axis-1'
         }
         ];
-        $scope.options = {
+        vm.options = {
             scales: {
                 yAxes: [
                   {

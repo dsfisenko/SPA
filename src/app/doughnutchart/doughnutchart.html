@@ -1,16 +1,16 @@
-<div class="content" ng-controller="doughnutchart">
+<div class="content" ng-controller="doughnutchart as vm">
 	<h2 class="header">Incidents by state</h2>
 	<div class="ui divider"></div>
 	<table>
 		<tr>
-		<td><canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-colors="colors" 
-            chart-labels="labels" chart-options="options" chart-dataset-override="datasetOverride" style="width: 500px; height: 250px;">
+		<td><canvas id="doughnut" class="chart chart-doughnut" chart-data="vm.data" chart-colors="vm.colors" 
+            chart-labels="vm.labels" chart-options="vm.options" chart-dataset-override="vm.datasetOverride" style="width: 500px; height: 250px;">
 			</canvas>
 		</td>
 		<td class="chartData">
             <table class="ui very basic table">
                 <tbody>
-                    <tr ng-repeat="item in chartData">
+                    <tr ng-repeat="item in vm.chartData">
 						<td><i ng-style="{ color: item.color }" class="icon square"></i>{{item.lable}}</td>
 						<td>{{item.data}}</td>
 					</tr>

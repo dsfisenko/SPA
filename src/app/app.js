@@ -1,8 +1,3 @@
-var serviceNowApi = {
-    baseUrl: 'https:////dev35531.service-now.com//api//now//',
-    uLogin: 'admin',
-    uPass: 'admin'
-};
 (function () {
     'use strict';
 

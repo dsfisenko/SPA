@@ -1,6 +1,6 @@
-<div class="content" ng-controller="linechart">
+<div class="content" ng-controller="linechart as vm">
 	<h2 class="header">Incidents Over Time</h2>
 	<div class="ui divider"></div>
-	<canvas id="base" class="chart chart-line" chart-data="data" 
-            chart-labels="labels" chart-options="options" chart-dataset-override="datasetOverride"></canvas>
+	<canvas id="base" class="chart chart-line" chart-data="vm.data" 
+            chart-labels="vm.labels" chart-options="vm.options" chart-dataset-override="vm.datasetOverride"></canvas>
 </div>

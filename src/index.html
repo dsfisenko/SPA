@@ -26,7 +26,7 @@
                   <div class="card" ng-include="'app/linechart/linechart.html'"></div>
 	            </div>
             </div>
-			<div class="bs-component" ng-controller="listdata" ng-include="'app/listdata/listdata.html'"></div>
+			<div class="bs-component" ng-controller="listdata as vm" ng-include="'app/listdata/listdata.html'"></div>
 		</div>
       </div>
     </div>
@@ -55,7 +55,6 @@
 
     <!-- IncidentDetails -->
     <script src="app/modalDetails/modalInstanceCtrl.js"></script>
-    <script src="app/modalDetails/modalComponent.js"></script>
     <!-- endinject -->
   </body>
 </html>
